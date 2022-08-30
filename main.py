@@ -124,41 +124,10 @@ race_information_label = Label(information_library_frame, text="Race is a rule i
 
 back_button_il = Button(information_library_frame, text="BACK", font="helvetica 20 bold",
                         command=lambda: back_to_main_menu())
-race_dropdown_variable = StringVar()
-race_dropdown_variable.set("Races")
 information_of_race = OptionMenu(information_library_frame, race_dropdown_variable, "Races", "Aarakocra", "Aasimar", "Bugbear", "Centaur", "Changeling", "Dragonborn", "Dwarf", \
                                  "Elf", "Firbolg", "Genasi", "Gith", "Gnome", "Goblin", "Goliath", "Grung", "Half-Elf", "Halfling", "Half-Orc", "Hobgoblin", "Human", "Kalashtar", \
                                  "Kenku", "Kobold", "Lizardfolk", "Locathah", "Loxodon", "Minotaur", "Orc", "Simic Hybrid", "Shifter", "Tabaxi", "Tiefling", "Tortle", "Triton", \
                                  "Veldalken", "Verdan", "Warforged", "Yuan-Ti Pureblood")
-information_of_race.configure(font="helvetica 23 bold")
-race_dictionary = {"Races": "Race is a rule in Dungeons & Dragons referring to the fantasy species or ancestry of a character.\n "
-                            "Popular races include human, elf, dwarf and halfling. Unlike the modern real-world use of the\n "
-                            "word, 'race' in Dungeons & Dragons does not refer to a character's ethnic background."
-                   , "Aarakocra": "Sequestered in high mountains atop tall trees, the aarakocra sometimes called birdfolk, evoke\n "
-                                  "fear and wonder. Many aarakocra aren’t even native to the Material Plane. They hail from a \n"
-                                  "world beyond—from the boundless vistas of the Elemental Plane of Air. They are immigrants, \n"
-                                  "refugees, scouts, and explorers, their outposts functioning as footholds in a world both strange and alien."
-                   , "Aasimar": "Aasimar are the descendants of celestial beings. These folk generally appear as glorious humans \n"
-                                " with lustrous hair, flawless skin, and piercing eyes. Aasimar often attempt to pass as humans\n"
-                                " in order to right wrongs and defend goodness on the Material Plane without drawing undue \n"
-                                "attention to their celestial heritage. They strive to fit into society, although they usually rise to the\n"
-                                " top, becoming revered leaders and honourable heroes."
-                   , "Bugbear": "Bugbears are born for battle and mayhem. Surviving by raiding and hunting, they bully the weak \n"
-                                "and despise being bossed around, but their love of carnage means they will fight for powerful\n "
-                                "masters if bloodshed and treasure are assured. Bugbears are often found in the company of \n"
-                                "their cousins, hobgoblins and goblins. Bugbears usually enslave goblins they encounter, and they bully \n"
-                                "hobgoblins into giving them gold and food in return for serving as scouts and shock troops. Even when paid,\n"
-                                " bugbears are at best unreliable allies, yet goblins and hobgoblins understand that no matter how much\n"
-                                " bugbears might drain a tribe of resources, these creatures are a potent force."
-                   , "Centaur": "Reclusive wanderers and omen-readers of the wild, centaurs avoid conflict but fight fiercely when\n"
-                                " pressed. They roam the vast wilderness, keeping far from borders, laws, and the company of\n"
-                                " other creatures. Centaur tribes range across lands with mild to hot climates. They are \n"
-                                "hunter-gatherers and rarely build shelters or even use tents. A centaur that can't keep pace with the rest of\n"
-                                " its tribe is left behind. Some such centaurs vanish into the wilderness and are never seen again. Those \n"
-                                "that can bear the loss of their tribe might take up residence among other races. Frontier settlements\n"
-                                " value the natural knowledge of their centaur residents. Many such communities owe their survival to the\n"
-                                " insight and acumen of a centaur."
-                   }
 confirm_class_button = Button(information_library_frame, text="Find Info About The Class", font="helvetica 8", command=lambda: show_class())
 class_information_label = Label(information_library_frame, text="Your class is the primary definition of what your character can do in the extraordinary magical\n"
                                "landscape of Dungeons & Dragons. A class is more than a profession; it is your character’s calling.", font="helvetica 10")
