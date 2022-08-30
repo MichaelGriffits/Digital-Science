@@ -60,11 +60,11 @@ def show_race():
     chosen_race = race_dropdown_variable.get()
     race_information_label.config(text=race_dictionary[chosen_race])
 
+
 def show_class():
     global chosen_class
     chosen_class = class_dropdown_variable.get()
     class_information_label.config(text=class_dictionary[chosen_class])
-
 
 
 # Main Menu Widgets Creation
@@ -128,6 +128,7 @@ information_of_race = OptionMenu(information_library_frame, race_dropdown_variab
                                  "Elf", "Firbolg", "Genasi", "Gith", "Gnome", "Goblin", "Goliath", "Grung", "Half-Elf", "Halfling", "Half-Orc", "Hobgoblin", "Human", "Kalashtar", \
                                  "Kenku", "Kobold", "Lizardfolk", "Locathah", "Loxodon", "Minotaur", "Orc", "Simic Hybrid", "Shifter", "Tabaxi", "Tiefling", "Tortle", "Triton", \
                                  "Veldalken", "Verdan", "Warforged", "Yuan-Ti Pureblood")
+information_of_race.configure(font="helvetica 23 bold")
 confirm_class_button = Button(information_library_frame, text="Find Info About The Class", font="helvetica 8", command=lambda: show_class())
 class_information_label = Label(information_library_frame, text="Your class is the primary definition of what your character can do in the extraordinary magical\n"
                                "landscape of Dungeons & Dragons. A class is more than a profession; it is your character’s calling.", font="helvetica 10")
@@ -139,47 +140,73 @@ information_of_class.configure(font="helvetica 23 bold")
 class_dictionary = {"Classes": "Your class is the primary definition of what your character can do in the extraordinary magical\n"
                                "landscape of Dungeons & Dragons. A class is more than a profession; it is your character’s calling."
                     ,"Artificer": "Makers of magic-infused objects, artificers are defined by their inventive nature. They see magic\n" 
-                                 " as a complex system waiting to be decoded and controlled. Instead of ephemeral spells, they seek \n" \
+                                 "as a complex system waiting to be decoded and controlled. Instead of ephemeral spells, they seek \n"
                                  "to craft durable, useful, marvelous magical items."}
+heading_information = Label(information_library_frame, text="Information Library", font="helvetica 30 bold")
 
 # Information Library Menu Widgets Placement
 back_button_il.grid(row=0, column=0)
-information_of_race.grid(row=3, column=2, padx=10)
-race_information_label.grid(row=5, column=2)
-confirm_race_button.grid(row=4, column=2)
-information_of_class.grid(row=6, column=2)
-class_information_label.grid(row=8, column=2)
-confirm_class_button.grid(row=7, column=2)
+information_of_race.grid(row=3, column=1, padx=10)
+race_information_label.grid(row=5, column=1)
+confirm_race_button.grid(row=4, column=1)
+information_of_class.grid(row=6, column=1)
+class_information_label.grid(row=8, column=1)
+confirm_class_button.grid(row=7, column=1)
+heading_information.grid(row=0, column=2)
 
 # Character Creation Menu Widgets Creation
 back_button_cc = Button(character_creation_frame, text="BACK", font="helvetica 20 bold",
                         command=lambda: back_to_main_menu())
 random_stat_button = Button(character_creation_frame, text="Roll Your Random Stat",
                             command=lambda: test_button_click())
+name_input = Entry(character_creation_frame, width=30, font="helvetica 20 bold")
 random_stat_val_1 = IntVar()
 random_stat_val_2 = IntVar()
 random_stat_val_3 = IntVar()
 random_stat_val_4 = IntVar()
 random_stat_val_5 = IntVar()
 random_stat_val_6 = IntVar()
-random_stat_label_1 = Label(character_creation_frame, textvariable=random_stat_val_1)
-random_stat_label_2 = Label(character_creation_frame, textvariable=random_stat_val_2)
-random_stat_label_3 = Label(character_creation_frame, textvariable=random_stat_val_3)
-random_stat_label_4 = Label(character_creation_frame, textvariable=random_stat_val_4)
-random_stat_label_5 = Label(character_creation_frame, textvariable=random_stat_val_5)
-random_stat_label_6 = Label(character_creation_frame, textvariable=random_stat_val_6)
-
+random_stat_label_1 = Label(character_creation_frame, textvariable=random_stat_val_1, font="helvetica 15")
+random_stat_label_2 = Label(character_creation_frame, textvariable=random_stat_val_2, font="helvetica 15")
+random_stat_label_3 = Label(character_creation_frame, textvariable=random_stat_val_3, font="helvetica 15")
+random_stat_label_4 = Label(character_creation_frame, textvariable=random_stat_val_4, font="helvetica 15")
+random_stat_label_5 = Label(character_creation_frame, textvariable=random_stat_val_5, font="helvetica 15")
+random_stat_label_6 = Label(character_creation_frame, textvariable=random_stat_val_6, font="helvetica 15")
+strength_stat_label_1 = Label(character_creation_frame, text="STR", font="helvetica 20 bold")
+dexterity_stat_label_2 = Label(character_creation_frame, text="DEX", font="helvetica 20 bold")
+constitution_stat_label_3 = Label(character_creation_frame, text="CON", font="helvetica 20 bold")
+intelligence_stat_label_4 = Label(character_creation_frame, text="INT", font="helvetica 20 bold")
+wisdom_stat_label_5 = Label(character_creation_frame, text="WIS", font="helvetica 20 bold")
+charisma_stat_label_6 = Label(character_creation_frame, text="CHA", font="helvetica 20 bold")
+strength_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
+dexterity_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
+constitution_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
+intelligence_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
+wisdom_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
+charisma_input = Entry(character_creation_frame, width=2, font="helvetica 15 bold")
 
 # Character Creation Menu Widgets Placement
-back_button_cc.grid(row=0, column=0)
-random_stat_button.grid(row=3, column=2)
-random_stat_label_1.grid(row=3, column=0)
-random_stat_label_2.grid(row=4, column=0)
-random_stat_label_3.grid(row=5, column=0)
-random_stat_label_4.grid(row=6, column=0)
-random_stat_label_5.grid(row=7, column=0)
-random_stat_label_6.grid(row=8, column=0)
-
+back_button_cc.grid(row=0, column=0, sticky="w")
+name_input.grid(row=2, column=1, columnspan=3)
+random_stat_button.grid(row=15, column=0, sticky="w")
+random_stat_label_1.grid(row=3, column=0, pady=5, padx=15, sticky="w")
+random_stat_label_2.grid(row=4, column=0, pady=5, padx=15, sticky="w")
+random_stat_label_3.grid(row=5, column=0, pady=5, padx=15, sticky="w")
+random_stat_label_4.grid(row=6, column=0, pady=5, padx=15, sticky="w")
+random_stat_label_5.grid(row=7, column=0, pady=5, padx=15, sticky="w")
+random_stat_label_6.grid(row=8, column=0, pady=5, padx=15, sticky="w")
+strength_stat_label_1.grid(row=4, column=1, sticky="w")
+dexterity_stat_label_2.grid(row=6, column=1, sticky="w")
+constitution_stat_label_3.grid(row=8, column=1, sticky="w")
+intelligence_stat_label_4.grid(row=10, column=1, sticky="w")
+wisdom_stat_label_5.grid(row=12, column=1, sticky="w")
+charisma_stat_label_6.grid(row=14, column=1, sticky="w")
+strength_input.grid(row=3, column=1, sticky="w")
+dexterity_input.grid(row=5, column=1, sticky="w")
+constitution_input.grid(row=7, column=1, sticky="w")
+intelligence_input.grid(row=9, column=1, sticky="w")
+wisdom_input.grid(row=11, column=1, sticky="w")
+charisma_input.grid(row=13, column=1, sticky="w")
 
 # Main Menu Widgets Placement
 menu_name.grid(row=0, column=2, padx=125, pady=15)
