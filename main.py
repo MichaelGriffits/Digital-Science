@@ -210,7 +210,7 @@ class_dictionary = {"Classes": "Your class is the primary definition of what you
                               " as extensions of nature's indomitable will.",
                     "Fighter": "Fighters share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat.\n"
                                " They are well acquainted with death, both meting it out and staring it defiantly in the face.",
-                    "Monl": "Monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a\n"
+                    "Monk": "Monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a\n"
                             " striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a \n"
                             "monk does."}
 heading_information = Label(information_library_frame, text="Information Library", font="helvetica 30 bold")
