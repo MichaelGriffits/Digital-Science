@@ -138,7 +138,7 @@ back_button_lc.grid(row=0, column=0)
 
 ## Information Library Menu Widgets Creation
 #Line 138 - 178 Brief information that will be displayed in relation to races and the conformation button
-#line 181 - 194 Brief information that will be displayed in relation to class and the conformation button
+#line 181 - 216 Brief information that will be displayed in relation to class and the conformation button
 race_dropdown_variable = StringVar()
 race_dropdown_variable.set("Races")
 race_dictionary = {"Races": "Race is a rule in Dungeons & Dragons referring to the fantasy species or ancestry of a character.\n "
@@ -195,14 +195,31 @@ class_dictionary = {"Classes": "Your class is the primary definition of what you
                                "landscape of Dungeons & Dragons. A class is more than a profession; it is your character’s calling."
                     ,"Artificer": "Makers of magic-infused objects, artificers are defined by their inventive nature. They see magic\n" 
                                  "as a complex system waiting to be decoded and controlled. Instead of ephemeral spells, they seek \n"
-                                 "to craft durable, useful, marvelous magical items."}
+                                 "to craft durable, useful, marvelous magical items.",
+                    "Barbarian": "For some, their rage springs from a communion with fierce animal spirits. Others draw from a roiling\n"
+                                 "reservoir of anger at a world full of pain. For every barbarian, rage is a power that fuels not just \n"
+                                 " a battle frenzy but also uncanny reflexes, resilience, and feats of strength.",
+                    "Bard": "Whether scholar, skald, or scoundrel, a bard weaves magic through words and music to inspire allies, demoralize\n"
+                            "foes, manipulate minds, create illusions, and even heal wounds. The bard is a master of song, speech, and the \n"
+                            "magic they contain.",
+                    "Cleric":"Clerics are intermediaries between the mortal world and the distant planes of the gods. As varied as the gods\n"
+                             " they serve, clerics strive to embody the handiwork of their deities. No ordinary priest, a cleric is imbued\n"
+                             " with divine magic.",
+                    "Druid": "Whether calling on the elemental forces of nature or emulating the creatures of the animal world, druids are\n"
+                              " an embodiment of nature's resilience, cunning, and fury. They claim no mastery over nature, but see themselves\n"
+                              " as extensions of nature's indomitable will.",
+                    "Fighter": "Fighters share an unparalleled mastery with weapons and armor, and a thorough knowledge of the skills of combat.\n"
+                               " They are well acquainted with death, both meting it out and staring it defiantly in the face.",
+                    "Monl": "Monks are united in their ability to magically harness the energy that flows in their bodies. Whether channeled as a\n"
+                            " striking display of combat prowess or a subtler focus of defensive ability and speed, this energy infuses all that a \n"
+                            "monk does."}
 heading_information = Label(information_library_frame, text="Information Library", font="helvetica 30 bold")
 
 
 ## Character Creation Menu Widgets Creation
-#Line 201 - 208 Logic for the random stat roller
-#Line 217 - 229 Creation of where the user can inpout there selected stats
-#Line 234 - 290 Dictionarys and labels for the race dependent statisstic/skills
+#Line 225 - 238 Logic for the random stat roller
+#Line 240 - 252 Creation of where the user can inpout there selected stats
+#Line 256 - 314 Dictionarys and labels for the race dependent statisstic/skills
 back_button_cc = Button(character_creation_frame, text="BACK", font="helvetica 20 bold",
                         command=lambda: back_to_main_menu())
 random_stat_button = Button(character_creation_frame, text="Roll Your Random Stat",
